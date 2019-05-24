@@ -20,10 +20,8 @@ namespace TrentonTestApp.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Urenregistratie()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }

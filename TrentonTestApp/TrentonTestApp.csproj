@@ -197,7 +197,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <EntityDeploy Include="TrentonHoursModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -211,6 +210,7 @@
     <Content Include="Views\Hours\Details.cshtml" />
     <Content Include="Views\Hours\Edit.cshtml" />
     <Content Include="Views\Hours\Index.cshtml" />
+    <Content Include="Views\Home\Urenregistratie.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
