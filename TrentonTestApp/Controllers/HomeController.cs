@@ -20,7 +20,7 @@ namespace TrentonTestApp.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Admin_Account_Administration()
         {
             ViewBag.Message = "Your contact page.";
 
