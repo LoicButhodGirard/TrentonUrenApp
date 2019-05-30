@@ -20,16 +20,16 @@
                     @Html.ActionLink("Urenregistratie", "Urenregistratie", "Home")
                 </li>
                 <li class="nav-item">
-                    @Html.ActionLink("About", "About", "Home")
+                    @Html.ActionLink("Accountbeheer", "Accountbeheer", "Home")
                 </li>
             </ul>
         </nav>
     </header>
-    <div class="container body-content">
+    <div class="container-fluid body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Trenton B.V.</p>
+        <footer class="bg-dark">
+            <p class="p-footer">&copy; @DateTime.Now.Year - Trenton B.V.</p>
         </footer>
     </div>
 

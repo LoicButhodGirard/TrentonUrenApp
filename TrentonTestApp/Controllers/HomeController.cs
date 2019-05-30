@@ -24,5 +24,10 @@ namespace TrentonTestApp.Controllers
         {
             return View();
         }
+
+        public ActionResult Accountbeheer()
+        {
+            return View();
+        }
     }
 }
