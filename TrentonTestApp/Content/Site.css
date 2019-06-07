@@ -39,9 +39,12 @@ textarea {
 
     /* NEW CSS */
 
-
 .col-md {
     padding: 10px;
+}
+
+.project-name, .maandag-input, .dinsdag-input, .woensdag-input, .donderdag-input, .vrijdag-input, .zaterdag-input, .zondag-input {
+    background-color: rgb(236, 236, 236);
 }
 
 
@@ -78,4 +81,8 @@ select, input, button {
 
 .p-footer { 
     color: lightgray;
+}
+
+.form-group input, button{
+    width: 75px;
 }
