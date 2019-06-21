@@ -132,28 +132,47 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HoursController.cs" />
+    <Compile Include="Controllers\ProjectsController.cs" />
+    <Compile Include="Controllers\Project_GroupController.cs" />
+    <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Controllers\statusController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Hour.cs">
-      <DependentUpon>TrentonHoursModel.tt</DependentUpon>
+      <DependentUpon>TrentonUrenModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\HourModel.cs" />
+    <Compile Include="Project.cs">
+      <DependentUpon>TrentonUrenModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project_Group.cs">
+      <DependentUpon>TrentonUrenModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TrentonHoursModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TrentonHoursModel.Context.tt</DependentUpon>
+    <Compile Include="Role.cs">
+      <DependentUpon>TrentonUrenModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="TrentonHoursModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TrentonHoursModel.tt</DependentUpon>
+    <Compile Include="status.cs">
+      <DependentUpon>TrentonUrenModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="TrentonHoursModel.Designer.cs">
+    <Compile Include="TrentonUrenModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TrentonHoursModel.edmx</DependentUpon>
+      <DependentUpon>TrentonUrenModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TrentonUrenModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrentonUrenModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TrentonUrenModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrentonUrenModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>TrentonUrenModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -209,15 +228,15 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
-    <Content Include="TrentonHoursModel.Context.tt">
+    <Content Include="TrentonUrenModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TrentonHoursModel.edmx</DependentUpon>
-      <LastGenOutput>TrentonHoursModel.Context.cs</LastGenOutput>
+      <DependentUpon>TrentonUrenModel.edmx</DependentUpon>
+      <LastGenOutput>TrentonUrenModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="TrentonHoursModel.tt">
+    <Content Include="TrentonUrenModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TrentonHoursModel.edmx</DependentUpon>
-      <LastGenOutput>TrentonHoursModel.cs</LastGenOutput>
+      <DependentUpon>TrentonUrenModel.edmx</DependentUpon>
+      <LastGenOutput>TrentonUrenModel.cs</LastGenOutput>
     </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -232,18 +251,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <EntityDeploy Include="TrentonHoursModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TrentonHoursModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="TrentonHoursModel.edmx.diagram">
-      <DependentUpon>TrentonHoursModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Views\Hours\Create.cshtml" />
-    <Content Include="Views\Hours\Delete.cshtml" />
-    <Content Include="Views\Hours\Details.cshtml" />
-    <Content Include="Views\Hours\Edit.cshtml" />
-    <Content Include="Views\Hours\Index.cshtml" />
     <Content Include="Views\Home\Urenregistratie.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
@@ -258,9 +265,47 @@
     <Content Include="Views\Home\Urenoverzicht.cshtml" />
     <Content Include="Views\Home\Projectbeheer.cshtml" />
     <Content Include="Views\Home\TestPage.cshtml" />
+    <EntityDeploy Include="TrentonUrenModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TrentonUrenModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="TrentonUrenModel.edmx.diagram">
+      <DependentUpon>TrentonUrenModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Views\Hours\Create.cshtml" />
+    <Content Include="Views\Hours\Delete.cshtml" />
+    <Content Include="Views\Hours\Details.cshtml" />
+    <Content Include="Views\Hours\Edit.cshtml" />
+    <Content Include="Views\Hours\Index.cshtml" />
+    <Content Include="Views\Projects\Create.cshtml" />
+    <Content Include="Views\Projects\Delete.cshtml" />
+    <Content Include="Views\Projects\Details.cshtml" />
+    <Content Include="Views\Projects\Edit.cshtml" />
+    <Content Include="Views\Projects\Index.cshtml" />
+    <Content Include="Views\Project_Group\Create.cshtml" />
+    <Content Include="Views\Project_Group\Delete.cshtml" />
+    <Content Include="Views\Project_Group\Details.cshtml" />
+    <Content Include="Views\Project_Group\Edit.cshtml" />
+    <Content Include="Views\Project_Group\Index.cshtml" />
+    <Content Include="Views\Roles\Create.cshtml" />
+    <Content Include="Views\Roles\Delete.cshtml" />
+    <Content Include="Views\Roles\Details.cshtml" />
+    <Content Include="Views\Roles\Edit.cshtml" />
+    <Content Include="Views\Roles\Index.cshtml" />
+    <Content Include="Views\status\Create.cshtml" />
+    <Content Include="Views\status\Delete.cshtml" />
+    <Content Include="Views\status\Details.cshtml" />
+    <Content Include="Views\status\Edit.cshtml" />
+    <Content Include="Views\status\Index.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

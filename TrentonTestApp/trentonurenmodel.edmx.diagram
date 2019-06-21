@@ -4,15 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d50ac27b7a354982a64a608c0d0d3621" Name="Diagram1">
-        <EntityTypeShape EntityType="TrentonTestModel1.Project_Group" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="TrentonTestModel1.Project" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="TrentonTestModel1.Role" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="TrentonTestModel1.status" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TrentonTestModel1.User" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
-        <AssociationConnector Association="TrentonTestModel1.project_group1" ManuallyRouted="false" />
-        <AssociationConnector Association="TrentonTestModel1.user_group" ManuallyRouted="false" />
-        <AssociationConnector Association="TrentonTestModel1.role_id" ManuallyRouted="false" />
+      <Diagram DiagramId="a5ff2b4232344c72a79689019d862c04" Name="Diagram1">
+        <EntityTypeShape EntityType="TrentonTestModel.Hour" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrentonTestModel.Project_Group" Width="1.5" PointX="8.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrentonTestModel.Project" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrentonTestModel.Role" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrentonTestModel.status" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrentonTestModel.User" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="TrentonTestModel.Project_id" ManuallyRouted="false" />
+        <AssociationConnector Association="TrentonTestModel.status_id" ManuallyRouted="false" />
+        <AssociationConnector Association="TrentonTestModel.user_id" ManuallyRouted="false" />
+        <AssociationConnector Association="TrentonTestModel.project_group1" ManuallyRouted="false" />
+        <AssociationConnector Association="TrentonTestModel.user_group" ManuallyRouted="false" />
+        <AssociationConnector Association="TrentonTestModel.role_id" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

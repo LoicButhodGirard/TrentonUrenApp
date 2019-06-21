@@ -17,6 +17,7 @@ namespace TrentonTestApp
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Project()
         {
+            this.Hours = new HashSet<Hour>();
             this.Project_Group = new HashSet<Project_Group>();
         }
     
@@ -24,6 +25,8 @@ namespace TrentonTestApp
         public string name { get; set; }
         public Nullable<int> group_id { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Hour> Hours { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Project_Group> Project_Group { get; set; }
     }

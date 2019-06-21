@@ -12,12 +12,13 @@ namespace TrentonTestApp.Controllers
 {
     public class HoursController : Controller
     {
-        private TrentonTestContext db = new TrentonTestContext();
+        private TrentonTestEntities2 db = new TrentonTestEntities2();
 
         // GET: Hours
         public ActionResult Index()
         {
-            return View(db.Hours.ToList());
+            var hours = db.Hours.Include(h => h.Project).Include(h => h.status).Include(h => h.User);
+            return View(hours.ToList());
         }
 
         // GET: Hours/Details/5
@@ -38,6 +39,9 @@ namespace TrentonTestApp.Controllers
         // GET: Hours/Create
         public ActionResult Create()
         {
+            ViewBag.project_id = new SelectList(db.Projects, "id", "name");
+            ViewBag.status_id = new SelectList(db.status, "id", "status1");
+            ViewBag.user_id = new SelectList(db.Users, "id", "name");
             return View();
         }
 
@@ -46,7 +50,7 @@ namespace TrentonTestApp.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id,amount,Date,Project")] Hour hour)
+        public ActionResult Create([Bind(Include = "id,hours,date,user_id,project_id,status_id")] Hour hour)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +59,9 @@ namespace TrentonTestApp.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.project_id = new SelectList(db.Projects, "id", "name", hour.project_id);
+            ViewBag.status_id = new SelectList(db.status, "id", "status1", hour.status_id);
+            ViewBag.user_id = new SelectList(db.Users, "id", "name", hour.user_id);
             return View(hour);
         }
 
@@ -70,6 +77,9 @@ namespace TrentonTestApp.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.project_id = new SelectList(db.Projects, "id", "name", hour.project_id);
+            ViewBag.status_id = new SelectList(db.status, "id", "status1", hour.status_id);
+            ViewBag.user_id = new SelectList(db.Users, "id", "name", hour.user_id);
             return View(hour);
         }
 
@@ -78,7 +88,7 @@ namespace TrentonTestApp.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id,amount,Date,Project")] Hour hour)
+        public ActionResult Edit([Bind(Include = "id,hours,date,user_id,project_id,status_id")] Hour hour)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +96,9 @@ namespace TrentonTestApp.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.project_id = new SelectList(db.Projects, "id", "name", hour.project_id);
+            ViewBag.status_id = new SelectList(db.status, "id", "status1", hour.status_id);
+            ViewBag.user_id = new SelectList(db.Users, "id", "name", hour.user_id);
             return View(hour);
         }
 

@@ -15,8 +15,14 @@ namespace TrentonTestApp
     public partial class Hour
     {
         public int id { get; set; }
-        public Nullable<int> amount { get; set; }
-        public Nullable<System.DateTime> Date { get; set; }
-        public string Project { get; set; }
+        public int hours { get; set; }
+        public System.DateTime date { get; set; }
+        public int user_id { get; set; }
+        public int project_id { get; set; }
+        public int status_id { get; set; }
+    
+        public virtual Project Project { get; set; }
+        public virtual status status { get; set; }
+        public virtual User User { get; set; }
     }
 }

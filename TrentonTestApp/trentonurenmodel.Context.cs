@@ -13,10 +13,10 @@ namespace TrentonTestApp
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TrentonTestEntities1 : DbContext
+    public partial class TrentonTestEntities2 : DbContext
     {
-        public TrentonTestEntities1()
-            : base("name=TrentonTestEntities1")
+        public TrentonTestEntities2()
+            : base("name=TrentonTestEntities2")
         {
         }
     
@@ -25,6 +25,7 @@ namespace TrentonTestApp
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Hour> Hours { get; set; }
         public virtual DbSet<Project_Group> Project_Group { get; set; }
         public virtual DbSet<Project> Projects { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
