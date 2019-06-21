@@ -1,7 +1,11 @@
-﻿
+﻿@model TrentonTestApp.Models.HourModel
+
 @{
     ViewBag.Title = "Urenregistratie";
+
+
 }
+
 
 <h2>Urenregistratie</h2>
 <div class="container-fluid mt-3">
@@ -29,45 +33,45 @@
         </div>
         <!-- ## Urenregistratie ##-->
         <!-- table headers-->
-        <form class="form-group">
-            <div class="container">
-                <div class="row tabelnaam">
-                    <div class="col-md tablenav">
-                        Project
-                    </div>
-                    <div class="col-md tablenav">
-                        Maandag
-                    </div>
-                    <div class="col-md tablenav">
-                        Dinsdag
-                    </div>
-                    <div class="col-md tablenav">
-                        Woensdag
-                    </div>
-                    <div class="col-md tablenav">
-                        Donderdag
-                    </div>
-                    <div class="col-md tablenav">
-                        Vrijdag
-                    </div>
-                    <div class="col-md tablenav">
-                        Zaterdag
-                    </div>
-                    <div class="col-md tablenav">
-                        Zondag
-                    </div>
-                    <div class="col-md tablenav">
-                        Opslaan
-                    </div>
+        <div class="container">
+            <div class="row tabelnaam">
+                <div class="col-md tablenav">
+                    Project
                 </div>
-
+                <div class="col-md tablenav">
+                    Maandag
+                </div>
+                <div class="col-md tablenav">
+                    Dinsdag
+                </div>
+                <div class="col-md tablenav">
+                    Woensdag
+                </div>
+                <div class="col-md tablenav">
+                    Donderdag
+                </div>
+                <div class="col-md tablenav">
+                    Vrijdag
+                </div>
+                <div class="col-md tablenav">
+                    Zaterdag
+                </div>
+                <div class="col-md tablenav">
+                    Zondag
+                </div>
+                <div class="col-md tablenav">
+                    Opslaan
+                </div>
+            </div>
+            <form class="form-group" method="post">
                 <!-- PROJECT 1 inputvelden-->
                 <div class="row inputvelden">
                     <div class="col-md project-name">
                         <label>Project 1</label>
                     </div>
                     <div class="col-md maandag-input">
-                        <input class="#" type="number"></input>
+                       <input class="#" type="number" name="yo" value="@Request.Form["yo"]"></input>
+                        @Html.EditorFor(model => model.yo, new { htmlAttributes = new { @class = "form-control" } })
                     </div>
                     <div class="col-md dinsdag-input">
                         <input class="#" type="number"></input>
@@ -90,70 +94,9 @@
                     <div class="col-md" style="background-color: rgb(236, 236, 236)">
                         <p hidden>empty</p>
                     </div>
-                </div>
-
-                <!-- PROJECT 2 inputvelden-->
-                <div class="row inputvelden">
-                    <div class="col-md project-name">
-                        <label>Project 2</label>
-                    </div>
-                    <div class="col-md maandag-input">
-                        <input class="#" type="number"></input>
-                    </div>
-                    <div class="col-md dinsdag-input">
-                        <input class="#" type="number"></input>
-                    </div>
-                    <div class="col-md woensdag-input">
-                        <input class="#" type="number"></input>
-                    </div>
-                    <div class="col-md donderdag-input">
-                        <input class="#" type="number"></input>
-                    </div>
-                    <div class="col-md vrijdag-input">
-                        <input class="#" type="number"></input>
-                    </div>
-                    <div class="col-md zaterdag-input">
-                        <input class="#" type="number"></input>
-                    </div>
-                    <div class="col-md zondag-input">
-                        <input class="#" type="number"></input>
-                    </div>
                     <div class="col-md" style="background-color: rgb(236, 236, 236)">
-                        <p hidden>empty</p>
+                        <input type="submit" />
                     </div>
-                </div>
-
-                <!-- PROJECT 3 inputvelden-->
-                <div class="row inputvelden">
-                    <div class="col-md project-name">
-                        <label>Project 3</label>
-                    </div>
-                    <div class="col-md maandag-input">
-                        <input class="#" type="number"></input>
-                    </div>
-                    <div class="col-md dinsdag-input">
-                        <input class="#" type="number"></input>
-                    </div>
-                    <div class="col-md woensdag-input">
-                        <input class="#" type="number"></input>
-                    </div>
-                    <div class="col-md donderdag-input">
-                        <input class="#" type="number"></input>
-                    </div>
-                    <div class="col-md vrijdag-input">
-                        <input class="#" type="number"></input>
-                    </div>
-                    <div class="col-md zaterdag-input">
-                        <input class="#" type="number"></input>
-                    </div>
-                    <div class="col-md zondag-input">
-                        <input class="#" type="number"></input>
-                    </div>
-                    <div class="col-md button-save" style="background-color: rgb(236, 236, 236)">
-                        <button>Opslaan</button>
-                    </div>
-                </div>
-            </div>
-        </form>
+            </form>
     </main>
 </div>
