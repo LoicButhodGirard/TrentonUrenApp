@@ -1,0 +1,14 @@
+1. open .sql met management studio
+2. sluit management studio
+3. open management studio, connect en refresh borderlayout.west
+4. database "TrentonTest" is zichtbaar.
+5. ???
+6. PROFIT! $$
+
+FIX:
+
+1. navigeer naar directory management studio.
+2. Kopieer Ssms.exe.config naar desktop
+zoek "NgenBind_OptimizeNinGac enabled=1"
+3. verwijder lijn
+4. sla op en vervang het config bestand in de directory.
