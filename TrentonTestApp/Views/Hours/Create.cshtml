@@ -4,64 +4,82 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
-
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Hour</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.hours, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.hours, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.hours, "", new { @class = "text-danger" })
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.date, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.date, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.date, "", new { @class = "text-danger" })
-            </div>
-        </div>
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <hr />
+    <h2>Urenregistratie</h2>
+    <hr />
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.user_id, "user_id", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("user_id", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.user_id, "", new { @class = "text-danger" })
-            </div>
-        </div>
+    <div class="container-fluid mt-3">
+        <main class="mb-4">
+            <div class="container-fluid">
+                <div class="col-1 mr-1">
+                    <div id="mySidenav" class="sidenav">
+                        <a href="@Url.Action("Create", "Hours")">Urenregistratie</a>
+                        <a href="@Url.Action("Index", "Hours")">Urenoverzicht</a>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <form name="" action="" method="">
+                            <fieldset>
+                                <div class="d-flex flex-column flex-md-row justify-content-around">
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.project_id, "project_id", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("project_id", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.project_id, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                                    <div class="col-md d-flex flex-column">
+                                        <div class="hour-header pl-2 pt-2"><p>Datum</p></div>
+                                        <div class="hour-content p-2">
+                                            @Html.EditorFor(model => model.date, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.date, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md d-flex flex-column">
+                                        <div class="col hour-header pl-2 pt-2"><p>Project</p></div>
+                                        <div class="col hour-content p-2">
+                                            @Html.DropDownList("project_id", null, htmlAttributes: new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.project_id, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md d-flex flex-column">
+                                        <div class="col hour-header pl-2 pt-2"><p>Aantal uur</p></div>
+                                        <div class="col hour-content p-2">
+                                            @Html.EditorFor(model => model.hours, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.hours, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md d-flex flex-column">
+                                        <div class="col hour-header pl-2 pt-2"><p>Gebruiker</p></div>
+                                        <div class="col hour-content p-2">
+                                            @Html.DropDownList("user_id", null, htmlAttributes: new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.user_id, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md d-flex flex-column">
+                                        <div class="col hour-header pl-2 pt-2"><p>Status</p></div>
+                                        <div class="col hour-content p-2">
+                                            @Html.DropDownList("status_id", null, htmlAttributes: new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.status_id, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md d-flex flex-column">
+                                        <div class="col hour-header pl-2 pt-2"><p>Opslaan</p></div>
+                                        <div class="col hour-content p-2">
+                                            <input type="submit" name="submit" value="Opslaan">
+                                        </div>
+                                    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.status_id, "status_id", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("status_id", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.status_id, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
             </div>
-        </div>
+        </main>
     </div>
+
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+

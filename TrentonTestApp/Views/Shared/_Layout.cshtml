@@ -16,21 +16,23 @@
                         <img src="~/Content/images/trentonlogo.png" style="width: 150px; height 200px;" />
                     </a>
                 </li>
+                <p> | </p>
                 <li class="nav-item mr-1">
-                    @Html.ActionLink("Urenregistratie", "Urenregistratie", "Home")
+                    @Html.ActionLink("Urenregistratie", "Create", "Hours")
                 </li>
+                <p> | </p>
                 <li class="nav-item mr-1">
-                    @Html.ActionLink("Urenoverzicht", "Urenoverzicht", "Home")
+                    @Html.ActionLink("Urenoverzicht", "Index", "Hours")
                 </li>
+                <p> | </p>
                 <li class="nav-item">
-                    @Html.ActionLink("Projectbeheer", "Projectbeheer", "Home")
+                    @Html.ActionLink("Projectbeheer", "Index", "Projects")
                 </li>
+                <p> | </p>
                 <li class="nav-item">
-                    @Html.ActionLink("Accountbeheer", "Accountbeheer", "Home")
+                    @Html.ActionLink("Accountbeheer", "Index", "Users")
                 </li>
-                <li class="nav-item">
-                    @Html.ActionLink("TestPage", "TestPage", "Home")
-                </li>
+                <p> | </p>
             </ul>
         </nav>
     </header>
