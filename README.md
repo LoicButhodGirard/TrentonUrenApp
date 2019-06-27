@@ -1,17 +1,17 @@
 # TrentonUrenApp
 
-## Leden:
+### Leden:
 1. Emile
 2. Loïc
 3. Alexander
 4. Leona.
 
-## Opdrachtgevers: 
+### Opdrachtgevers: 
 Trenton B.V's
 1. Sjoerd
 2. Mike
 
-## Commit issue
+### Commit issue
 na commit https://github.com/LoicButhodGirard/TrentonUrenApp/commit/418d748bfb39ea0782279a7b895104c940a5dc23
 zal het zijn dat de connection strings niet werken voor andere desktops en dat er mogelijk conflicten zijn met gegenereerde bestanden door visual studio.
 
