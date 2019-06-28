@@ -18,4 +18,10 @@ zal het zijn dat de connection strings niet werken voor andere desktops en dat e
 1. verander het begin van de connection string naar de naam van je computer of c+p de connection string vanuit management studio.
 2. leeg je .vs mappen (eentje is hidden).
 
-contact alexander voor de backups.
+### Installatie instructie
+Installeer het project vanaf de github repository
+1: Navigeer naar de github repository</li>
+2: Clone de repository
+3: Open "TrentonTestApp.sln".</li>
+4: Rebuild het project</li>
+5: Debug (CTRL + F5)
