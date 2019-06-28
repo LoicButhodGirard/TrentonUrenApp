@@ -20,8 +20,8 @@ zal het zijn dat de connection strings niet werken voor andere desktops en dat e
 
 ### Installatie instructie
 Installeer het project vanaf de github repository
-1: Navigeer naar de github repository</li>
-2: Clone de repository
-3: Open "TrentonTestApp.sln".</li>
-4: Rebuild het project</li>
-5: Debug (CTRL + F5)
+1. Navigeer naar de github repository</li>
+2. Clone de repository
+3. Open "TrentonTestApp.sln".</li>
+4. Rebuild het project</li>
+5. Debug (CTRL + F5)
